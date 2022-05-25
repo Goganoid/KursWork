@@ -1,0 +1,64 @@
+@startuml
+
+!include base.puml
+!include Proposition.puml
+!include Tender.puml
+!include User.puml
+
+
+top to bottom direction
+
+note bottom of Base : Усі інші класи наслідують Base
+'Company--|> Base
+'Tender--|> Base
+'Proposition--|> Base
+class Company {
+    + Owner : User
+    + Location : string  
+    + CompanyInfo : string
+    + Tenders : List<Tender>  
+    + Propositions : List<Proposition>  
+    + WonTenders : List<Tender>  
+}
+
+
+
+together {
+class Base
+class User
+class Tender
+class Company
+}
+
+User "1" -d-> "*" Company
+
+Company::Tenders "1" -r-> "*" Tender::Organizer
+Company::WonTenders "1" -r-> "*" Tender::Executor
+
+Company "1" -d-> "*" Proposition: +Propositions
+Tender "1" -d-> "*" Proposition: +Propositions
+
+newpage
+!include TenderController.puml
+!include AuthenticateController.puml
+!include UserController.puml
+!include RegisterModel.puml
+!include TenderModel.puml
+!include UserModel.puml
+!include CompanyModel.puml
+!include LoginModel.puml
+!include CompanyController.puml
+
+CompanyController -[hidden]-TenderController
+TenderController-[hidden]-AuthenticateController
+AuthenticateController-[hidden]-UserController
+TenderController::CreateTender -l[dashed]-> TenderModel
+
+AuthenticateController::Login -l[dashed]> LoginModel
+AuthenticateController::Register -l[dashed]> RegisterModel
+CompanyController::CreateCompany -l[dashed]> CompanyModel
+CompanyController::EditCompany -l[dashed]> CompanyModel
+
+UserController::EditUser -l[dashed]> UserModel
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+!include ./Program.puml
+!include ./Controllers/TenderController.puml
+!include ./Controllers/AuthenticateController.puml
+!include ./Controllers/UserController.puml
+!include ./Models/RegisterModel.puml
+!include ./Models/Proposition.puml
+!include ./Models/Tender.puml
+!include ./Models/LoginModel.puml
+!include ./Models/User.puml
+!include ./Models/TenderModel.puml
+@enduml

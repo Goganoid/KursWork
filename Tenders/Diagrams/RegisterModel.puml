@@ -1,0 +1,8 @@
+@startuml
+class RegisterModel {
+    + FirstName : string  
+    + SecondName : string  
+    + Email : string  
+    + Password : string  
+}
+@enduml

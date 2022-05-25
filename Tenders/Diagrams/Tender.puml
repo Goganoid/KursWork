@@ -1,0 +1,15 @@
+@startuml
+class Tender { 
+    + PubDate : DateTime  
+    + EndDate : DateTime  
+    + IsActive : bool  
+    + Title : string  
+    + Propositions : List<Proposition>  
+    + Cost : uint  
+    + CompanyExecutorId : int  
+    + CompanyOrganizer : Company  
+    + CompanyExecutorId : int?  
+    + CompanyExecutor : Company
+}
+
+@enduml

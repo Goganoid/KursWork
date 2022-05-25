@@ -1,0 +1,5 @@
+@startuml
+class UserWonTendersRemoveNullable <<partial>> {
+    # <<override>> BuildTargetModel(modelBuilder:ModelBuilder) : void
+}
+@enduml

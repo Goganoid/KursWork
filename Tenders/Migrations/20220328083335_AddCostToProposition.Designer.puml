@@ -1,0 +1,5 @@
+@startuml
+class AddCostToProposition <<partial>> {
+    # <<override>> BuildTargetModel(modelBuilder:ModelBuilder) : void
+}
+@enduml

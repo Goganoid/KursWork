@@ -1,0 +1,5 @@
+@startuml
+class TenderAddParticipants <<partial>> {
+    # <<override>> BuildTargetModel(modelBuilder:ModelBuilder) : void
+}
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class CompanyController {
+    - _config : IConfiguration
+    - _context : ApplicationContext
+    + CompanyController(config:IConfiguration, context:ApplicationContext)
+    + CreateCompany(model:CompanyModel) : Task<IActionResult>
+    + EditCompany(model:CompanyModel, id:int) : Task<IActionResult>
+    + RemoveCompany(companyId:int) : Task<IActionResult>
+    + GetCompanyInfo(companyId:int) : Task<IActionResult>
+    + GetCompanyTenders(companyId:int) : Task<IActionResult>
+}
+@enduml

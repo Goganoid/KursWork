@@ -1,0 +1,9 @@
+@startuml
+
+
+abstract class Base {
+    + Id : int  
+}
+
+
+@enduml

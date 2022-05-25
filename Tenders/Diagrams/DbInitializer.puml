@@ -1,0 +1,6 @@
+@startuml
+class DbInitializer <<static>> {
+    + {static} RandomTender() : Tender
+    + {static} Initialize(context:ApplicationContext) : void
+}
+@enduml

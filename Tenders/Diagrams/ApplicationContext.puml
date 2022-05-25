@@ -1,0 +1,10 @@
+@startuml
+class ApplicationContext {
+    + Users : DbSet<User> 
+    + Tenders : DbSet<Tender> 
+    + Propositions : DbSet<Proposition> 
+    + ApplicationContext()
+    + ApplicationContext(options:DbContextOptions<ApplicationContext>)
+    # <<override>> OnModelCreating(builder:ModelBuilder) : void
+}
+@enduml

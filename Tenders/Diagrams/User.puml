@@ -1,0 +1,20 @@
+@startuml
+
+'UserInfo -up-|> Base
+class UserInfo{
+' + UserId : int  
+    + FirstName : string  
+    + LastName : string  
+    + Email : string  
+}
+class User {
+   
+    
+    + Password : string  
+    + Companies : List<Company>
+'    + Tenders : List<Tender>  
+'    + Propositions : List<Proposition>  
+'    + WonTenders : List<Tender>  
+}
+UserInfo <|-right- User
+@enduml

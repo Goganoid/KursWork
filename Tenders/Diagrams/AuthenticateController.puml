@@ -1,0 +1,10 @@
+@startuml
+class AuthenticateController {
+    - _config : IConfiguration
+    - _context : ApplicationContext
+    + AuthenticateController(config:IConfiguration, context:ApplicationContext)
+    + Login(model:LoginModel) : Task<IActionResult>
+    + Register(model:RegisterModel) : Task<IActionResult>
+}
+'ControllerBase <|-- AuthenticateController
+@enduml

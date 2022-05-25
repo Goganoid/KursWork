@@ -1,0 +1,6 @@
+@startuml
+class CompanyModel {
+    + Name : string <<get>> <<set>>
+    + Location : string <<get>> <<set>>
+}
+@enduml

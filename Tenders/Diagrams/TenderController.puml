@@ -1,0 +1,16 @@
+@startuml
+class TenderController {
+    - _config : IConfiguration
+    - _context : ApplicationContext
+    + TenderController(config:IConfiguration, context:ApplicationContext)
+    + GetNTenders(n:int, searchTerm:string?) : IActionResult
+    + CreateTender(model:TenderModel) : Task<IActionResult>
+    + ToggleStatus(tenderId:int) : Task<IActionResult>
+    + RemoveTender(tenderId:int) : Task<IActionResult>
+    + Subscribe(tenderId:int, cost:int) : Task<IActionResult>
+    + Unsubscribe(tenderId:int) : Task<IActionResult>
+    + SetExecutor(tenderId:int, executorId:int) : Task<IActionResult>
+    + GetTenderInfo(tenderId:int) : Task<IActionResult>
+}
+'ControllerBase <|-- TenderController
+@enduml

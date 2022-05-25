@@ -1,0 +1,5 @@
+@startuml
+class ExplicitManyToManyUserTender <<partial>> {
+    # <<override>> BuildTargetModel(modelBuilder:ModelBuilder) : void
+}
+@enduml

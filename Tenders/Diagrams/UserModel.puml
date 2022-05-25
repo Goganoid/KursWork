@@ -1,0 +1,7 @@
+@startuml
+class UserModel {
+    + FirstName : string <<get>> <<set>>
+    + LastName : string <<get>> <<set>>
+    + Email : string <<get>> <<set>>
+}
+@enduml

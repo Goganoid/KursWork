@@ -1,0 +1,7 @@
+@startuml
+class TenderModel {
+    + EndDate : DateTime  
+    + Title : string  
+    + Cost : uint  
+}
+@enduml

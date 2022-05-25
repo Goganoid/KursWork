@@ -1,0 +1,6 @@
+@startuml
+class LoginModel {
+    + Email : string?  
+    + Password : string?  
+}
+@enduml

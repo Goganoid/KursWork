@@ -1,0 +1,15 @@
+@startuml
+class UserController {
+    - _config : IConfiguration
+    - _context : ApplicationContext
+    + UserController(config:IConfiguration, context:ApplicationContext)
+    + GetInfo(id:int) : Task<IActionResult>
+    + GetUserTenders(id:int) : Task<IActionResult>
+    + EditUser(id:int) : Task<IActionResult>
+    + GetUserCompanies(id:int) : Task<IActionResult>
+    + {static} GetUserId(identity:ClaimsIdentity?) : int?
+    + {static} GetUser(context:ApplicationContext, identity:ClaimsIdentity?) : Task<User?>
+    + {static} GetClaim(identity:ClaimsIdentity?, claimType:string) : string?
+}
+'ControllerBase <|-- UserController
+@enduml

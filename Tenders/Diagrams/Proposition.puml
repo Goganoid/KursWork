@@ -1,0 +1,10 @@
+@startuml
+class Proposition {
+'    + UserId : int  
+'    + User : User  
+    + Company : Company  
+'    + TenderId : int  
+    + Tender : Tender  
+    + Cost : uint  
+}
+@enduml
