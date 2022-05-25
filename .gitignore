@@ -12,4 +12,8 @@
 /dataSources/
 /dataSources.local.xml
 /.idea/
+Tenders/bin/
+Tenders/obj/
+*.csv
+Tenders/localdb.db
 
